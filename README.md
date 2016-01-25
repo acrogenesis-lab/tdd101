@@ -26,8 +26,6 @@ Run `gem install rspec`.
 
 `rspec --init` will init rspec in your current directory
 
-**
-
 **Describing the class 'Example'**
 
 ```ruby
