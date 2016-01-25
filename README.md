@@ -3,6 +3,7 @@
 ## Table of contents
 
 1. [Introduction](#introduction-to-tdd)
+2. [String Calculator Kata](calculator_kata)
 
 #Introduction to TDD
 
