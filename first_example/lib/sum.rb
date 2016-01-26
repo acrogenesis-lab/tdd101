@@ -1,10 +1,9 @@
 class Sum
-  def initialize(a, b)
-    @a = a
-    @b = b
+  def initialize(*args)
+    @array = args
   end
 
   def execute
-    @a + @b
+    @array.reduce(&:+)
   end
 end

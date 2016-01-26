@@ -16,4 +16,9 @@ describe Sum do
     sum = Sum.new(-1, 9)
     expect(sum.execute).to eql(8)
   end
+
+  it 'sums 3, 4, 5, 6' do
+    sum = Sum.new(3, 4, 5, 6)
+    expect(sum.execute).to eql(18)
+  end
 end
