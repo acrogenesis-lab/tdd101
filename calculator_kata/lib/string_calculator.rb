@@ -4,8 +4,7 @@ class StringCalculator
     delimiters = /(,|\n)/
     delimiters = string_numbers[2] if string_numbers.start_with?('//')
     array_numbers = string_numbers.split(delimiters).map(&:to_i)
-    negative_numbers = []
-    array_numbers.map { |x| negative_numbers << x if x.negative? }
+    negative_numbers = array_numbers.select(&:negative?)
     fail "Negative numbers are not allowed: #{negative_numbers}" unless negative_numbers.empty?
 
     array_numbers.reduce(&:+)
