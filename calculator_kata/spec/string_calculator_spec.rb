@@ -19,7 +19,7 @@ describe StringCalculator do
       expect(StringCalculator.add('15,30')).to eq(45)
     end
 
-    it 'will handle new lines "1\n2,3"' do
+    it 'will handle new lines as delimiters' do
       expect(StringCalculator.add("1\n2,3")).to eq(6)
     end
   end
