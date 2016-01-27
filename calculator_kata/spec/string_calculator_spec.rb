@@ -18,5 +18,9 @@ describe StringCalculator do
     it 'will return 45for "15,30"' do
       expect(StringCalculator.add('15,30')).to eq(45)
     end
+
+    it 'will handle new lines "1\n2,3"' do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
+    end
   end
 end
