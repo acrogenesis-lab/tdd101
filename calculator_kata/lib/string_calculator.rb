@@ -3,7 +3,11 @@ class StringCalculator
     return 0 if string_numbers.empty?
     delimiters = /(,|\n)/
     delimiters = string_numbers[2] if string_numbers.start_with?('//')
+    array_numbers = string_numbers.split(delimiters).map(&:to_i)
+    negative_numbers = []
+    array_numbers.map { |x| negative_numbers << x if x.negative? }
+    fail "Negative numbers are not allowed: #{negative_numbers}" unless negative_numbers.empty?
 
-    string_numbers.split(delimiters).map(&:to_i).reduce(&:+)
+    array_numbers.reduce(&:+)
   end
 end

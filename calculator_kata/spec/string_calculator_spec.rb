@@ -26,5 +26,10 @@ describe StringCalculator do
     it 'will handle custom delimiters' do
       expect(StringCalculator.add("//;\n1;2")).to eq(3)
     end
+
+    it 'will fail when negative numbers are used' do
+      expect { StringCalculator.add('-1,-3') }
+        .to raise_error('Negative numbers are not allowed: [-1, -3]')
+    end
   end
 end
